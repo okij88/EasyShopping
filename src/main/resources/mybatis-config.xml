@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE configuration
+  PUBLIC "-//mybatis.org//DTD Config 3.0//EN"
+  "http://mybatis.org/dtd/mybatis-3-config.dtd">
+<configuration>
+	<settings>
+		<setting name="mapUnderscoreToCamelCase" value="true" />
+	</settings>
+	<typeAliases>
+		<!-- 1.type：指定要起别名的类型全类名 alias：新的别名 -->
+		<!-- <typeAlias alias="EmpM" type="com.atguigu.mybatis.bean.Employee"/> -->
+		<!-- 2.package为某个包下所有类起别名 name：指定包名（为每一个类起一个默认别名，即小写） -->
+		<package name="com.es.bean" />
+		<!--3. 使用@Alias注解为某个类型指定新的别名 -->
+	</typeAliases>
+	<plugins>
+		<plugin interceptor="com.github.pagehelper.PageInterceptor"></plugin>
+	</plugins>
+</configuration>
